@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 
 import { motion, AnimatePresence, useScroll, useSpring, useTransform } from 'framer-motion'
 
+import { Analytics } from '@vercel/analytics/react'
+
 import { Particles } from './components/Particles'
 
 import { 
@@ -332,19 +334,6 @@ function App() {
 
               ></div>
 
-              <motion.div 
-
-                initial={{ opacity: 0, y: -20 }} 
-
-                animate={{ opacity: 1, y: 0 }}
-
-                className="inline-block border border-danger/50 bg-danger/10 text-danger px-4 py-1 rounded-full text-xs font-bold tracking-[0.2em] uppercase mb-6 animate-pulse"
-
-              >
-
-                  ⚠ Attenzione: Stai perdendo soldi
-
-              </motion.div>
 
               <h1 className="text-5xl md:text-8xl font-head font-black leading-[0.9] mb-8 relative z-10">
 
@@ -1159,6 +1148,8 @@ function App() {
               </div>
 
           </footer>
+
+          <Analytics />
 
       </div>
 
